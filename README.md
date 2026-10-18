@@ -4,4 +4,6 @@ TickerClue official website.
 
 Find the story behind the stock.
 
-[Visit the project website](https://eliran-n.github.io/tickerclue-dev/)
+[GitHub Pages landing page](https://eliran-n.github.io/tickerclue-dev/)
+
+[Official website](https://tickerclue.pages.dev/)
