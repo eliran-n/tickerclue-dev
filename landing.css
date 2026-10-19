@@ -1,0 +1,63 @@
+
+#tickerclue-page { color-scheme:light dark; font-family:Arial,Helvetica,sans-serif; --tc-bg:light-dark(#f7f9fc,#10151e); --tc-panel:light-dark(#fff,#161d29); --tc-text:light-dark(#18243a,#f0f4fa); --tc-muted:light-dark(#52627a,#aabbd1); --tc-line:light-dark(#dbe3ee,#2b3545); --tc-blue:light-dark(#086acf,#69b5ff); --tc-accent:light-dark(#eaf3ff,#1b3049); color:var(--tc-text); }
+#tickerclue-page * { box-sizing:border-box; }
+#tickerclue-page .tc-page { background:var(--tc-bg); padding:18px; }
+#tickerclue-page .tc-nav { display:flex; align-items:center; gap:9px; padding-bottom:25px; font-size:20px; font-weight:700; }
+#tickerclue-page .tc-intro { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; padding:20px 0 38px; }
+#tickerclue-page .tc-kicker { color:var(--tc-blue); font-size:11px; letter-spacing:1.7px; text-transform:uppercase; }
+#tickerclue-page h1 { font-size:38px; line-height:1.13; letter-spacing:-1.3px; margin:14px 0; font-weight:700; }
+#tickerclue-page p { font-size:14px; line-height:1.65; color:var(--tc-muted); margin:12px 0; }
+#tickerclue-page .tc-cta { display:inline-flex; align-items:center; gap:15px; background:#1687f8; color:white; padding:12px 18px; border-radius:7px; text-decoration:none; font-size:13px; font-weight:700; margin-top:10px; }
+#tickerclue-page .tc-meta { font-size:11px; margin-top:17px; }
+#tickerclue-page .tc-preview { background:var(--tc-panel); border:1px solid var(--tc-line); border-radius:12px; padding:19px; min-width:0; }
+#tickerclue-page .tc-preview-head { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:12px; }
+#tickerclue-page .tc-ticker { font-weight:700; font-size:18px; }
+#tickerclue-page .tc-pill { color:var(--tc-blue); background:var(--tc-accent); padding:6px 8px; border-radius:5px; font-size:11px; }
+#tickerclue-page .tc-summary { border-top:1px solid var(--tc-line); padding-top:13px; }
+#tickerclue-page .tc-summary strong { font-size:12px; }
+#tickerclue-page .tc-summary p { font-size:12px; margin:5px 0; }
+#tickerclue-page .tc-caption { text-align:right; font-size:11px; color:var(--tc-muted); margin-top:8px; }
+#tickerclue-page .tc-features-title { font-size:23px; margin:0 0 8px; letter-spacing:-.5px; }
+#tickerclue-page .tc-features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:19px; }
+#tickerclue-page .tc-feature { border:1px solid var(--tc-line); background:var(--tc-panel); border-radius:10px; padding:18px; }
+#tickerclue-page .tc-feature i,#tickerclue-page .tc-feature svg { width:19px; height:19px; color:var(--tc-blue); }
+#tickerclue-page .tc-feature h3 { font-size:14px; margin:13px 0 7px; font-weight:700; }
+#tickerclue-page .tc-feature p { font-size:12px; margin:0; }
+#tickerclue-page .tc-footer { border-top:1px solid var(--tc-line); margin-top:26px; padding-top:16px; font-size:11px; color:var(--tc-muted); }
+@media(max-width:360px) { #tickerclue-page .tc-features {grid-template-columns:1fr;} #tickerclue-page .tc-page {} }
+#tickerclue-page .tc-brandmark { width:32px; height:32px; }
+#tickerclue-page { --tc-yellow:light-dark(#a18100,#e6df58); --tc-pink:#eb4b98; }
+#tickerclue-page .tc-comparison-chart { display:block; width:100%; height:125px; margin:8px 0 10px; }
+#tickerclue-page .tc-chart-subtitle { font-size:11px; margin:13px 0 0; }
+#tickerclue-page .tc-preview { padding:16px; }
+#tickerclue-page .tc-preview .tc-ticker { font-size:16px; }
+#tickerclue-page .tc-summary { padding-top:10px; }
+#tickerclue-page .tc-comparison-chart { --tc-blue:light-dark(#4d80a8,#6f9abb); --tc-yellow:light-dark(#9c9148,#aaa367); --tc-pink:light-dark(#a16c89,#a57993); }
+#tickerclue-page .tc-features { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+#tickerclue-page .tc-feature { padding:20px; }
+#tickerclue-page .tc-feature h3 { margin-top:12px; font-size:15px; }
+#tickerclue-page .tc-feature ul { padding-left:17px; margin:12px 0 0; color:var(--tc-muted); font-size:13px; line-height:1.7; }
+#tickerclue-page .tc-feature li + li { margin-top:9px; }
+#tickerclue-page .tc-engineering { margin-top:30px; padding-top:24px; border-top:1px solid var(--tc-line); }
+#tickerclue-page .tc-engineering h2 { font-size:22px; margin:0 0 13px; }
+#tickerclue-page .tc-engineering h3 { font-size:14px; margin:20px 0 6px; }
+#tickerclue-page .tc-engineering p { font-size:13px; }
+#tickerclue-page .tc-engineering strong { color:var(--tc-text); }
+@media(max-width:600px) { #tickerclue-page .tc-features {grid-template-columns:1fr;} }
+#tickerclue-page .tc-feature-heading { display:flex; align-items:center; gap:9px; }
+#tickerclue-page .tc-feature-heading > i, #tickerclue-page .tc-feature-heading > svg { flex:0 0 19px; }
+#tickerclue-page .tc-feature .tc-feature-heading h3 { min-width:0; margin:0; }
+
+body { margin:0; background:light-dark(#f7f9fc,#10151e); }
+:root { color-scheme:light dark; }
+#tickerclue-page { max-width:1080px; margin:0 auto; }
+#tickerclue-page .tc-page { padding:36px 32px; }
+#tickerclue-page .tc-cta { min-height:44px; }
+#tickerclue-page .tc-cta:hover { background:#0875dc; }
+#tickerclue-page .tc-cta:focus-visible { outline:3px solid var(--tc-blue); outline-offset:4px; }
+@media(max-width:600px) { #tickerclue-page .tc-page { padding:24px 18px; } }
+@media(max-width:600px) {
+  #tickerclue-page .tc-intro { grid-template-columns:1fr; gap:24px; }
+  #tickerclue-page h1 { font-size:32px; }
+  #tickerclue-page .tc-nav { padding-bottom:15px; }
+}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TickerClue — Stock Research, Market Insights &amp; Comparisons</title>
-  <meta name="description" content="A stock research web application with AI-assisted market insights, company financials, news, and interactive stock comparisons. Available in English and Hebrew.">
+  <meta name="description" content="A personal stock research project: explore its features, Gemini AI integration, Yahoo Finance data, interactive comparisons and Cloudflare architecture.">
   <meta name="author" content="Eliran">
   <link rel="canonical" href="https://eliran-n.github.io/tickerclue-dev/">
   <link rel="icon" href="./brand-mark.svg" type="image/svg+xml">
@@ -26,31 +26,193 @@
   <meta name="twitter:image" content="https://eliran-n.github.io/tickerclue-dev/tickerclue-preview.png">
   <meta name="twitter:image:alt" content="TickerClue — Find the story behind the stock.">
   <meta name="theme-color" content="#10151e">
-  <style>
-    :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; background: #10151e; color: #f0f4fa; }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; }
-    main { width: 100%; max-width: 748px; padding: 40px 24px; text-align: center; }
-    .preview { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; border: 1px solid #2b3545; border-radius: 12px; }
-    h1 { margin: 28px 0 10px; font-size: clamp(28px, 5vw, 36px); letter-spacing: -.025em; }
-    .tagline { margin: 0 0 18px; color: #c7daef; font-size: 18px; }
-    .description { max-width: 580px; margin: 0 auto; color: #b7c3d6; font-size: 16px; line-height: 1.7; }
-    .details { margin: 16px 0 0; color: #a1b2c9; font-size: 13px; line-height: 1.6; }
-    .visit { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; padding: 13px 24px; margin-top: 26px; background: #1687f8; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background-color .15s ease; }
-    .visit:hover { background: #0875dc; }
-    .visit:focus-visible { outline: 3px solid #a4d5ff; outline-offset: 5px; }
-    @media (max-width: 420px) { main { padding: 28px 18px; } .description { font-size: 15px; } .details { font-size: 12px; } .tagline { font-size: 16px; } }
-    @media (prefers-reduced-motion: reduce) { .visit { transition: none; } }
-  </style>
+  <link rel="stylesheet" href="./landing.css?v=20261019-overview">
 </head>
 <body>
-  <main>
-    <img class="preview" src="./tickerclue-preview.png" width="1200" height="630" alt="TickerClue — market context, financial data, and stock comparisons.">
-    <h1>TickerClue</h1>
-    <p class="tagline">Find the story behind the stock.</p>
-    <p class="description">A stock research web application bringing together AI-assisted market insights, company financials, news, analyst coverage, and interactive stock comparisons.</p>
-    <p class="details">English &amp; Hebrew · Desktop &amp; mobile · Light &amp; dark themes</p>
-    <a class="visit" href="https://tickerclue.pages.dev/">Visit TickerClue <span aria-hidden="true">↗</span></a>
-  </main>
+  <!-- Static Lucide icons v1.17.0; see LICENSE-lucide.txt. -->
+<div id="tickerclue-page">
+<main class="tc-page">
+<header class="tc-nav"><img class="tc-brandmark" src="./brand-mark.svg" alt="">TickerClue</header>
+<div class="tc-intro">
+<div>
+<div class="tc-kicker">Personal project · Application overview</div>
+<h1>Find the story<br>behind the stock.</h1>
+<p>Built from my own need for a more organized way to research stocks and follow the companies in my personal portfolio.</p><a class="tc-cta " href="https://tickerclue.pages.dev/" target="_blank" rel="noopener">Visit TickerClue <span aria-hidden="true">↗</span></a>
+<p class="tc-meta">English &amp; Hebrew · Desktop &amp; mobile · Light &amp; dark</p>
+</div>
+<div>
+<div class="tc-preview">
+<div class="tc-preview-head"><span><span class="tc-ticker">NVDA</span><br><span>NVIDIA</span></span><span class="tc-pill">Stock comparison</span>
+</div>
+<p class="tc-chart-subtitle">Percentage returns · Shared period</p>
+<svg class="tc-comparison-chart" role="img" aria-label="Illustrative comparison of NVIDIA, Microsoft and Apple. Not actual market data." viewBox="0 0 285 125"><path d="M4 100.87272727272727H209" stroke="var(--tc-line)" fill="none"></path><path d="M4 79.23636363636363H209" stroke="var(--tc-line)" fill="none"></path><path d="M4 57.6H209" stroke="var(--tc-line)" fill="none"></path><path d="M4 107.05454545454545 L17.666666666666664 101.4909090909091 L31.333333333333332 104.58181818181818 L45 94.69090909090909 L58.666666666666664 97.78181818181818 L72.33333333333333 87.27272727272727 L86 91.6 L99.66666666666667 79.23636363636363 L113.33333333333333 83.56363636363636 L127 69.96363636363637 L140.66666666666666 74.9090909090909 L154.33333333333331 61.30909090909091 L168 65.63636363636363 L181.66666666666669 53.272727272727266 L195.33333333333334 59.45454545454545 L209 45.23636363636362" stroke="var(--tc-blue)" stroke-width="1.7" stroke-opacity=".62" stroke-linejoin="round" fill="none"></path><circle cx="209" cy="45.23636363636362" r="2" fill="var(--tc-blue)" fill-opacity=".65"></circle><text x="217" y="49.23636363636362" fill="var(--tc-muted)" font-family="Arial,sans-serif" font-size="11">NVIDIA</text><path d="M4 107.05454545454545 L17.666666666666664 105.2 L31.333333333333332 108.9090909090909 L45 101.4909090909091 L58.666666666666664 103.34545454545454 L72.33333333333333 95.92727272727272 L86 99.63636363636364 L99.66666666666667 90.36363636363636 L113.33333333333333 94.69090909090909 L127 86.03636363636363 L140.66666666666666 89.12727272727273 L154.33333333333331 79.23636363636363 L168 83.56363636363636 L181.66666666666669 75.52727272727273 L195.33333333333334 78 L209 66.87272727272727" stroke="var(--tc-yellow)" stroke-width="1.7" stroke-opacity=".62" stroke-linejoin="round" fill="none"></path><circle cx="209" cy="66.87272727272727" r="2" fill="var(--tc-yellow)" fill-opacity=".65"></circle><text x="217" y="70.87272727272727" fill="var(--tc-muted)" font-family="Arial,sans-serif" font-size="11">Microsoft</text><path d="M4 107.05454545454545 L17.666666666666664 109.52727272727273 L31.333333333333332 105.81818181818181 L45 103.96363636363637 L58.666666666666664 108.2909090909091 L72.33333333333333 102.10909090909091 L86 104.58181818181818 L99.66666666666667 97.78181818181818 L113.33333333333333 100.87272727272727 L127 94.07272727272728 L140.66666666666666 98.39999999999999 L154.33333333333331 90.36363636363636 L168 93.45454545454545 L181.66666666666669 84.8 L195.33333333333334 87.89090909090909 L209 80.47272727272727" stroke="var(--tc-pink)" stroke-width="1.7" stroke-opacity=".62" stroke-linejoin="round" fill="none"></path><circle cx="209" cy="80.47272727272727" r="2" fill="var(--tc-pink)" fill-opacity=".65"></circle><text x="217" y="84.47272727272727" fill="var(--tc-muted)" font-family="Arial,sans-serif" font-size="11">Apple</text>
+</svg>
+<div class="tc-summary"><strong>Latest stock analysis</strong>
+<p>Market context · Company news · Analyst coverage</p>
+</div>
+</div>
+<div class="tc-caption">Illustrative preview · Not market data</div>
+</div>
+</div>
+<h2 class="tc-features-title">Application capabilities</h2>
+<div class="tc-features">
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" aria-hidden="true" class="lucide lucide-search"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle>
+</svg>
+<h3>Homepage search, sectors &amp; favorites</h3>
+</div>
+<ul>
+<li>Search a local catalog of 10,452 listed symbols by company name or ticker. The catalog includes stocks and other listed securities; data availability varies by symbol.</li>
+<li>Browse all stocks, filter selected companies by sector or investment theme, or switch to Favorites to open a saved stock directly from the homepage.</li>
+<li>Browser Back and Forward restore the selected stock, search filters, chart comparisons and view state using reusable loaded results.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+</svg>
+<h3>Market data &amp; trading sessions</h3>
+</div>
+<ul>
+<li>Yahoo Finance quotes with daily price change, day low/high, 52-week range, market capitalization and volume, where available.</li>
+<li>Price refresh available every five minutes, with update timestamps and a refresh countdown.</li>
+<li>New York market-session indicators distinguish pre-market, regular trading, after-hours and closed sessions.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
+</svg>
+<h3>Company profile &amp; business context</h3>
+</div>
+<ul>
+<li>Company overview, sector and industry classification, main revenue sources and competitors.</li>
+<li>Company context sits alongside the stock data, with separate views for the latest analysis and company profile.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="brain-circuit" aria-hidden="true" class="lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle>
+</svg>
+<h3>Gemini-powered stock analysis</h3>
+</div>
+<ul>
+<li>Google Gemini API integration generates concise explanations of the latest supplied trading session, with refresh available hourly after a successful analysis.</li>
+<li>Up to five concise explanations of the stock’s latest movement distinguish market data, source-supported events and possible contributing factors.</li>
+<li>Analysis retains its session date; closed-market notices prevent older price commentary from appearing to describe today's trading.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="newspaper" aria-hidden="true" class="lucide lucide-newspaper"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect>
+</svg>
+<h3>Source-linked news &amp; article previews</h3>
+</div>
+<ul>
+<li>Company-relevant articles from selected English and Hebrew financial publishers, filtered for source, relevance and duplicates.</li>
+<li>Hover over a headline to view an available public article summary without opening the link; previews also support touch and keyboard interaction.</li>
+<li>Hebrew news falls back to English when no valid Hebrew articles are found. Preview content depends on publicly available summaries.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chart-no-axes-combined" aria-hidden="true" class="lucide lucide-chart-no-axes-combined"><path d="M12 16v5"></path><path d="M16 14.639V21"></path><path d="M20 10.656V21"></path><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"></path><path d="M4 18.463V21"></path><path d="M8 14.656V21"></path>
+</svg>
+<h3>Interactive price history</h3>
+</div>
+<ul>
+<li>Explore one day, ten days, one month, year to date, one year and five years of available price history.</li>
+<li>Switch between line, candlestick and bar views; inspect individual observations with pointer or touch interaction.</li>
+<li>Optional S&amp;P 500 comparison adds broader-market context.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="git-compare-arrows" aria-hidden="true" class="lucide lucide-git-compare-arrows"><circle cx="5" cy="6" r="3"></circle><path d="M12 6h5a2 2 0 0 1 2 2v7"></path><path d="m15 9-3-3 3-3"></path><circle cx="19" cy="18" r="3"></circle><path d="M12 18H7a2 2 0 0 1-2-2V9"></path><path d="m9 15 3 3-3 3"></path>
+</svg>
+<h3>Multi-stock return comparisons</h3>
+</div>
+<ul>
+<li>Compare the selected company with up to two additional stocks, with an optional S&amp;P 500 overlay.</li>
+<li>Percentage returns start from a shared observed date or timestamp, rather than comparing unrelated price scales.</li>
+<li>Choose comparison stocks through ticker search, favorites or similar-sector browsing; added stocks load price history independently of AI and news.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle>
+</svg>
+<h3>Analyst coverage &amp; price targets</h3>
+</div>
+<ul>
+<li>Recent investment-house recommendations include rating actions, publication dates and individual price targets where supplied.</li>
+<li>Average analyst price target, coverage count and target upside/downside provide consensus context where available.</li>
+<li>Duplicate investment houses are removed from recent recommendation cards; truncated rating actions remain accessible in full.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chart-column" aria-hidden="true" class="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path>
+</svg>
+<h3>Valuation &amp; financial health</h3>
+</div>
+<ul>
+<li>Trailing and forward P/E, Price/Sales, Price/Book and EV/EBITDA, alongside year-over-year revenue and earnings growth.</li>
+<li>Gross, operating and net margins, free cash flow, debt/equity and current ratio, where available.</li>
+<li>Company-specific risk and opportunity indicators derive from available financial data, with missing fields explicitly identified.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="table-2" aria-hidden="true" class="lucide lucide-table-2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+</svg>
+<h3>Quarterly results &amp; forward outlook</h3>
+</div>
+<ul>
+<li>The last four reported quarters show revenue, net income or loss, and actual versus estimated EPS with earnings surprises where available.</li>
+<li>Next-quarter revenue and EPS expectations appear separately from verified company guidance.</li>
+<li>Unavailable guidance, missing metrics and analyst estimates are presented distinctly instead of filling gaps with assumed values.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar-days" aria-hidden="true" class="lucide lucide-calendar-days"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path>
+</svg>
+<h3>Upcoming earnings &amp; company events</h3>
+</div>
+<ul>
+<li>Upcoming earnings dates and dated company events can include product launches, conferences and shareholder events.</li>
+<li>Source links and verification labels distinguish supported events from estimated earnings dates.</li>
+<li>Coverage depends on available sources; the interface handles sparse results and longer scrollable event lists.</li>
+</ul>
+</article>
+<article class="tc-feature">
+<div class="tc-feature-heading">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+</svg>
+<h3>Local favorites &amp; device transfer</h3>
+</div>
+<ul>
+<li>Add or remove favorites from search results or individual stock pages, with quick access from within the application.</li>
+<li>Favorites stay in browser-local storage without a user account.</li>
+<li>Explicit QR-code or link transfer moves a favorites list between devices, with confirmation before importing.</li>
+</ul>
+</article>
+</div>
+<section class="tc-engineering">
+<h2>Implementation &amp; design decisions</h2>
+<h3>Responsive interface &amp; localization</h3>
+<p>Desktop and mobile layouts, English LTR and Hebrew RTL support, light/dark themes, and language and appearance preferences saved across reloads. Keyboard navigation, accessible status messages and reduced-motion handling support everyday usability.</p>
+<h3>Independent data pipelines &amp; caching</h3>
+<p>Price data, AI analysis, news, company guidance and events load independently. Browser-side reuse and Cloudflare Workers KV caching reduce repeat requests. If an AI refresh fails, the last successful analysis remains visible with its original timestamp; generation retries are bounded.</p>
+<h3>Architecture &amp; development</h3>
+<p>A framework-free <strong>HTML, CSS and JavaScript</strong> frontend calls same-origin <strong>TypeScript Cloudflare Pages Functions</strong>. Provider API credentials remain on the server. The application is hosted on <strong>Cloudflare Pages</strong>, with <strong>Gemini</strong> for AI analysis and <strong>Yahoo Finance</strong> for available market data.</p>
+<p>Developed with <strong>OpenAI Codex</strong> and AI-assisted development, with personal ownership of the product requirements, interface design and feature refinement.</p>
+</section>
+<footer class="tc-footer">A personal project by Eliran · Built from a personal need for clearer stock research.</footer>
+</main>
+</div>
+  <script src="./landing.js?v=20261019-overview" defer></script>
 </body>
 </html>
